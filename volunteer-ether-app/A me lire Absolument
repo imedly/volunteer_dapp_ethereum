@@ -1,0 +1,58 @@
+Le projet consiste au dévelopement d'une application Dapp web3 basé sur les smart contracts Ethereum
+
+La tech stack utilisé pour le projet contient les éléments suivants :
+
+Nodejs, tailwindCSS, Ganache(Truffle)
+
+Configuration de l'environement
+
+    ** Environement NodeJS
+>>téléchargement de nodejs (version LTS recommandé).
+>>téléchargement de github desktop.
+>>téléchargement de ganache (www.trufflesuite/ganache).
+>>téléchargement de visual studio code.
+
+    ** Environement Ganache (Installation & configuration)
+>>Aprés le téléchargement de Ganache.AppImage(ici pour la version Debian).
+>>Aller sur propriétés -> permissions -> Autoriser l'exécution du fichier comme un programme. 
+>>Localiser le fichier et executer la commande suivante : 
+        chmod 777 ganache.AppImage
+>>double clicker sur le fichier, et cliquer sur "Quick Start".
+>>Valider "Save" (en haut de la fenétre à droite) et récuperer le demon d'execution (généralement il serait http://localhost:7545).
+
+    **Environement Metamask
+Partie 1 (Installation Metmask):
+>>télécharger l'extention metamask (disponible sur edge, chorme etc..).
+>>COnfigurer le premier accés à votre compte et enregistrer la clé secréte.
+>>Cliquer sur les ":" tout en haut de la fenétre à droite -> Réseaux -> Ajouter un réseau -> Ajouter manuellement un réseau.
+>> Remplissez les champs comme suivant : 
+        Nom du réseau : (vous pouvez le personaliser à votre choix).
+        Nouvelle URL de RPC : http://localhost:7545
+        ID de la chaine : 1337
+        Symbole de la devise : ETH
+        URL de l'explorateur de blocs : (Laisser-le vide !!).
+>>Cliquez sur "Se connecter", maintenant il est connecté à l'environement ganache en localhost sur le port 7545
+Partie 2 (liaison avec Ganache(Environement Blockchain Local)):
+>>Déplacez vous sur Ganache, localisez la premiére Adresse ETH.
+>>cliquer sur le symbole de "clé" à l'extréme droite, récuperer la clé secréte.
+>>Revenez sur votre navigateur, cliquez sur l'extention metamask.
+>> cliquez sur le bouton qui se localise au milieur (en haut de le page, avec menu déroulant presentant les différents comptes connéctés à l'extention).
+>>Cliquez sur "importer le compte", et validez votre choix.
+C/C:
+>>dorénavant votre Adresse Ethereum local(Ganache) est synchornisé sur Metamask, vous pouvez effectuer des transactions entres les différentes adresses (en local), en suivant le méme cheminement (en haut) expliqué.
+
+    ** Environement Github Desktop:
+(-------
+--------)
+
+    ** Environement VS Code:
+(-------
+-------)
+
+    ** Environement Truffle (VS Code):
+>>Executez ls commandes suivantes :
+        sudo su
+        npm install -g truffle
+        truffle init
+N/B : Il faut absoluement executer les commandes à l'intérieur du projet (Volunteer-ether-app), et ca se fait distinctement pour chaque projet, ce n'est pas global pour ubuntu : parceque la configs se télécharge et s'execute uniquement à l'intérieur du repos.
+
